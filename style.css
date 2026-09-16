@@ -1,0 +1,429 @@
+/* =========================
+   Variables
+   ========================= */
+
+:root {
+  --navy: #17365d;
+  --navy-dark: #102a47;
+  --orange: #e77500;
+  --orange-light: #fff4e8;
+
+  --bg: #ffffff;
+  --bg-light: #f7f9fc;
+
+  --text: #182536;
+  --muted: #66768a;
+  --border: #e3e9f0;
+
+  --max-width: 1100px;
+}
+
+
+/* =========================
+   Reset
+   ========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   Navigation
+   ========================= */
+
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  padding: 22px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--navy);
+  text-decoration: none;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.logo span {
+  color: var(--orange);
+}
+
+nav {
+  display: flex;
+  gap: 34px;
+}
+
+nav a {
+  color: #42566f;
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--orange);
+}
+
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    #f7f9fc 0%,
+    #ffffff 65%
+  );
+
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-container {
+  max-width: var(--max-width);
+  min-height: 520px;
+
+  margin: 0 auto;
+  padding: 80px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.eyebrow {
+  margin-bottom: 20px;
+
+  color: var(--orange);
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  color: var(--navy);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(58px, 8vw, 94px);
+  line-height: 0.98;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.tagline {
+  margin-top: 30px;
+
+  color: var(--muted);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  line-height: 1.45;
+}
+
+.line {
+  width: 55px;
+  height: 3px;
+
+  margin-top: 32px;
+
+  background: var(--orange);
+}
+
+
+/* =========================
+   Philosophy Symbol
+   ========================= */
+
+.hero-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  height: 300px;
+}
+
+.circle {
+  width: 245px;
+  height: 245px;
+
+  border-radius: 50%;
+
+  background: var(--orange-light);
+
+  border: 1px solid #f5d7bb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle span {
+  color: var(--navy);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 150px;
+  font-weight: 400;
+
+  line-height: 1;
+
+  transform: translateY(-7px);
+}
+
+
+/* =========================
+   Information Section
+   ========================= */
+
+.info {
+  background: var(--bg);
+}
+
+.info-container {
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+  padding: 90px 30px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
+
+.info-card {
+  text-align: center;
+}
+
+.icon {
+  height: 45px;
+
+  margin-bottom: 20px;
+
+  color: var(--orange);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  line-height: 1;
+}
+
+.info-card h2 {
+  margin-bottom: 18px;
+
+  color: var(--navy);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.info-card p {
+  color: var(--muted);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.meeting-detail {
+  margin-top: 20px;
+}
+
+.meeting-detail strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.email {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  color: var(--orange);
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  border-bottom: 1px solid transparent;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.email:hover {
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  padding: 30px;
+
+  background: var(--bg-light);
+
+  border-top: 1px solid var(--border);
+
+  text-align: center;
+}
+
+footer p {
+  color: #8090a2;
+
+  font-size: 14px;
+}
+
+footer span {
+  margin: 0 10px;
+  color: var(--orange);
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 750px) {
+
+  .nav-container {
+    padding: 18px 20px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero-container {
+    min-height: auto;
+
+    padding: 70px 25px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  .tagline {
+    font-size: 21px;
+  }
+
+  .hero-symbol {
+    width: 100%;
+    height: 220px;
+
+    margin-top: 35px;
+  }
+
+  .circle {
+    width: 190px;
+    height: 190px;
+  }
+
+  .circle span {
+    font-size: 115px;
+  }
+
+  .info-container {
+    padding: 65px 25px;
+
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  footer {
+    padding: 25px 20px;
+  }
+}
+
+
+/* =========================
+   Very Small Screens
+   ========================= */
+
+@media (max-width: 450px) {
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 53px;
+  }
+
+  .tagline {
+    font-size: 19px;
+  }
+}
